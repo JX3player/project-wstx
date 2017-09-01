@@ -634,4 +634,288 @@ nav .pagination{
             top: 15px;
         }
     }
+    .spec{
+        width: 1200px;
+        overflow: hidden;
+        .specListBox{
+            position: relative;
+            width: 2400px;
+            height: 312px;
+            .hobbyList{
+                width: 1200px;
+                height: 312px;
+                float: left;
+                li:first-child{
+                    margin-left: 0;
+                }
+                li{
+                    margin-left: 15px;
+                    width: 228px;
+                    float: left;
+                    background-color: #fff;
+                    margin-bottom: 14px;
+                    height: 300px;
+                    text-align: center;
+                    dl{
+                        position: relative;
+                        margin-top: 0;
+                        margin-bottom: 24px;
+                        dt{
+                            padding: 40px 0 15px;
+                            height: 200px;
+                            img{
+                                width: 140px;
+                                height: 140px;
+                            }
+                        }
+                        dd{
+                            text-align: center;
+                            padding: 0 20px 10px 20px;
+                            font-size: 14px;
+                        }
+                        .btn{
+                            padding: 0;
+                            position: absolute;
+                            left: 54px;
+                            bottom: 4px;
+                            display: none;
+                            width: 120px;
+                            height: 30px;
+                            line-height: 30px;
+                            border: 1px solid #be1e2d;
+                            color: #be1e2d;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.xm-recommend-name{
+    margin-bottom: 10px;
+    height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.xm-recommend-price{
+    color: #be1e2d;
+}
+.xm-recommend-tips{
+    position: relative;
+    color: #757575;
+}
+.btn{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.xm-pagers-wrapper{
+    margin-top: 35px;
+    margin-bottom: 40px;
+    .xm-pagers{
+        margin: 0 auto;
+        text-align: center;
+        .pager{
+            cursor: default;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            padding: 10px;
+            margin: 0 2px;
+            background-color: transparent;
+            text-align: center;
+            .dot{
+                display: block;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #f5f5f5;
+                border-radius: 6px;
+                text-align: left;
+                text-indent: -9999em;
+                overflow: hidden;
+                transition: box-shadow 0.2s linear;
+                background-color: #b0b0b0;
+            }
+        }
+        .active .dot{
+            background-color: #ff6700;
+        }      
+    }
+}
+/*footer*/
+.footer{
+    padding: 20px 0px 18px 0px;
+    background: #000;
+    border-top: 1px solid #3a3a3a;
+    color: #fff;    
+}
+.footer .promise{
+    border-bottom: 1px solid #262626;
+    height: 45px;
+}
+.footer .promise li{
+    width: 22%;
+    float: left;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    border-left: 1px solid #262626;
+}
+.footer .promise li:first-child{
+    border-left: none;
+}
+.footer .promise .large{
+    width: 33%;
+}
+.footer .promise li span{
+    color: #be1e2d;
+    font-family: Georgia, 'Monotype Corsiva', Arial, sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    margin-right: 4px;
+}
+.footer .row{
+    margin-top: 20px;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 6px;
+}
+.footer .row:after{
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+.footer .row .item{
+    width: 16.5%;
+    float: left;
+}
+.footer .row .item .word{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 1.1;
+}
+.footer .row .item li{
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    line-height: 1.42857143;
+}
+.footer .row .item .fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-caret-right:before{
+    content: "";
+}
+.footer .row .item a{
+    color: #fff;
+}
+.footer .container .row .service{
+    padding-left: 60px;
+    width: 23%;
+    height: 108px;
+    border-left: 1px solid #2e2e2e;
+}
+.row .service img{
+    position: absolute;
+    top: -2px;
+    left: -32px;
+}
+.footer .row .twodcode{
+    width: 10%;
+    float: right;
+    text-align: right
+}
+.footer .row .twodcode h4.word{
+    margin: 0;
+    margin-bottom: 4px;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    text-align: right;
+    line-height: 1.1;
+}
+.footer .row .twodcode li{
+    float: right;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.footer .row .twodcode img{
+    width: 84px;
+    margin-top: 6px;
+}
+#floor5{
+    overflow: hidden;
+    margin: 30px auto;
+}
+/*partner&copyright*/
+.partner{
+    background: #000;
+    padding: 0 0 10px 0;
+}
+.partner ul{
+    overflow: hidden;
+}
+.partner ul li{
+    color: #999;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.42857143;
+    display: inline-block;
+}
+
+.partner ul li:before {
+    content: "|";
+    display: inline-block;
+    margin: 0 12px;
+    color: #262626;
+}
+.partner ul li:first-child:before {
+    content: "";
+    display: inline-block;
+    visibility: hidden;
+    margin: 0;
+}
+.partner ul li a{
+    color: #999;
+    font-size: 12px;
+}
+.partner p{
+    margin: 0 0 8.5px;
+    margin-top: 6px;
+    color: #999;
+    font-size: 12px;
+    line-height: 24px;
+}
+.partner p span{
+    margin-right: 30px;
+}
+.partner p span a {
+    display: inline-block;
+    color: #999;
 }
