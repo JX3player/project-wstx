@@ -58,18 +58,24 @@ em{
 .pullRight li{
     float: left;
     position: relative;
+    cursor: pointer;
+}
+.pullRight li:hover>a{
+    color: #BE1E2D!important;    
+}
+.pullRight .focus,.pullRight .focus2{
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
 }
 .topNav .pullRight li a{
+    box-sizing: border-box;
     padding: 0 12px;    
     color: #333;
 }
-.pullRight .focus:hover a{
-    padding: 0 11px;    
-}
 .pullRight .focus:hover{
     background-color: #fff;
-    border-left:1px solid #ccc;
-    border-right:1px solid #ccc;
+    border-left:1px solid #ccc ;
+    border-right:1px solid #ccc ;
 }
 .pullRight .focus:hover .dropmenu{
     display: flex;
@@ -122,9 +128,6 @@ em{
     .mc li a:hover{
         color:#BE1E2D
     }
-}
-.pullRight .focus2:hover a{
-    padding: 0 11px;    
 }
 .pullRight .focus2:hover{
     background-color: #fff;
@@ -352,9 +355,9 @@ em{
     width: 118px;
     background-color: #fff;
 }
+
 /*nav*/
 .nav{
-    background: pink;
     width: 100%;
     height: 46px;
     border-bottom: 3px solid #be1e2d;
@@ -374,7 +377,7 @@ em{
     width: 240px;
     height: 45px;
     line-height: 45px;
-    color: #fff;
+    color: #fff!important;
     border: 0;
     background-color: #be1e2d;
     padding: 0;
@@ -389,6 +392,7 @@ em{
     padding: 0 0 0 46px;
     font-weight: 400;
 }
+
 .navMain .pullRight{
     float: right;
 }
@@ -419,6 +423,13 @@ em{
     height: auto;
     line-height: 46px;
 }
+.navList li:hover{
+    background: #fff;
+}
+.navList li:hover ul{
+    display: block;
+}
+
 .navList li:first-child{
     border-top:1px solid #F5F5F5;
 }
@@ -436,7 +447,7 @@ em{
 .navList li ul{
     display: none;
     position: absolute;
-    top: -1px;
+    top: 0px;
     left: 240px;
     background-color: #fff;
     border-top: 0px;
@@ -462,6 +473,9 @@ em{
     font-size: 14px;
     position: relative;
     background-color: transparent;
+}
+.category a:hover{
+    color: #BE1E2D;
 }
 .brands{
     width: 200px;
@@ -505,7 +519,9 @@ em{
 .bannerSlideShow{
     width: 100%;
     height: 100%;
-    background: url(../img/indexImg/adc300e03344803f.jpg) no-repeat;
+    img{
+        width: 100%;
+    }
 }
 /*slogan*/
 .slogan{
