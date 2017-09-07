@@ -4,6 +4,8 @@
 }
 img{
     display: inline-block;
+    border: 0;
+    vertical-align: middle;
 }
 em{
     font-style: normal;
@@ -292,9 +294,6 @@ em{
 .cartBox:hover .cartHidden{
     display: block;
 }
-
-
-
 .cartHiddenTop{
     height: 30px;
     padding: 0 10px;
@@ -372,6 +371,9 @@ em{
     display: block;
     margin: 0;
     padding: 0;
+}
+.navMain>li>a:hover{
+    color:#BE1E2D;
 }
 .navMain .navHidden>a{
     width: 240px;
@@ -527,7 +529,7 @@ em{
 .slogan{
     height: 44px;
     width: 100%;
-    background: -webkit-linear-gradient(top, #333, #000);
+    background: #333;
     box-shadow: 0 3px 5px #ccc;
 }
 .listSlogan>li{
@@ -550,6 +552,20 @@ em{
     display: inline-block;
     font-size: 22px;
     background: url(../img/indexImg/slogan-icon.png) no-repeat;
+}
+.listSlogan>li .sloganTxt>span{
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    top: 11px;
+    width: 0px;
+    height: 22px;
+    background: #333;
+    z-index: 2;
+    transition: width 0.5s;
+}
+.listSlogan>li .sloganTxt:hover span{
+    width: 120px;
 }
 .listSlogan>li .sloganTxt .q{
     background-position:  0 -22px;
@@ -615,26 +631,49 @@ em{
 .block ul li{
     margin-left: 16px;
     width: 288px;
+    height: 235px;
     float: left;
+    overflow: hidden;
+}
+.block ul li img{
+    transform: scale(1);
+    transition: all 1s;
+}
+.block ul li img:hover{
+    transform: scale(1.08);
 }
 .partnerBox{
     overflow: hidden;
     margin: 30px auto;
+    position: relative;
 }
 .partnerSlideShow{
-    overflow: hidden;
     position: relative;
     float: left;
     width: 1160px;
-}
-.partnerSlideShow ul{
-    float: left;
     height: 80px;
-    background: pink;
-    width: 100%;
+}
+#alliances1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 7567px;
+}
+.partnerSlideShow ul li{
+    float: left;
+    height: 100%;
+    display: inline-block;
+    border-right: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+.partnerSlideShow ul li a{
+    display: block;
 }
 .partnerBox .extra{
-    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 40px;
     height: 80px;
     background-color: #fff;
@@ -646,6 +685,10 @@ em{
     width: 20px;
     height: 30px;
     background: url(../img/indexImg/newicon1.png) no-repeat;
+    z-index: 99;
+}
+.extra a{
+    z-index: 99;
 }
 .floor{
     padding-top: 2px;
@@ -703,19 +746,47 @@ h3 i{
     margin-bottom: 20px;
     width: 100%;
 }
+.left .blockList{
+    overflow: hidden;
+}
+.left .blockList img{
+    transform: scale(1);
+    transition: all 1s; 
+}
+.left .blockList:hover img{
+    transform: scale(1.07);
+}
 .blocks .right{
     float: left;
     width: 976px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-between;
+}
+.right ul{
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-between;
 }
 .right ul li{
     height: 318px;
-    margin-left: 20px;
     margin-bottom: 20px;
     padding: 20px;
     width: 224px;
     float: left;
     background-color: #fff;
     position: relative;
+}
+.right ul li{
+    transition: all 0.2s; 
+    box-shadow:none;
+    margin-top: 0px;
+}
+.right ul li:hover{
+    box-shadow:0 10px 10px 5px #DCDCDC;
+    margin-top: -2px;
 }
 .right ul li .figure{
     width: 184px;

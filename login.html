@@ -34,18 +34,18 @@
 						<form class="loginForm" action="">
 							<div class="inputGroup">
 								<span class="icon"></span>
-								<input id="userName" type="text" placeholder="邮箱/用户名/已验证手机" />
+								<input id="userId" type="text" placeholder="邮箱/用户名/已验证手机" />
 							</div>
 							<div class="inputGroup">
 								<span class="icon"></span>
-								<input id="userPass" type="text" placeholder="请输入登录密码" />
+								<input id="userPass" type="password" placeholder="请输入登录密码" />
 							</div>
 							<div class="extraGroup">
 								<input type="checkbox" id="autoLogin"/><span>自动登录</span>
 								<span id="forgetPassword">忘记密码？</span>
 							</div>
 							<div class="inputGroup">
-								<input type="submit" id="loginBtn" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" />
+								<input type="button" id="loginBtn" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" />
 							</div>
 							<div class="nav">
 								<a href="#">
@@ -82,3 +82,28 @@
 	
 </body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){		
+		$("#loginBtn").click(function(){
+			//1、
+			$.post(
+				"login.php",
+				{
+					"userId":$("#userId").val(),
+					"userPass":$("#userPass").val()
+				},
+				function(data){					
+					if(data=="1"){//登录成功！
+						//记录cookie
+//						saveCookie("userId",$("#userId").val(),7);
+						location.href="index.html";
+					}else{
+						alert("登录失败，用户名或者密码不对！");
+					}
+				}
+			);
+		});
+	});
+	
+</script>
